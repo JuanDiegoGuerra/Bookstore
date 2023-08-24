@@ -3,7 +3,7 @@ import Book from './Book';
 import AddForm from './AddForm';
 
 const BookList = () => {
-const books = useSelector((store) => store.books);
+  const books = useSelector((store) => store.books);
 
   return (
     <section>

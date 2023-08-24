@@ -36,10 +36,10 @@ const booksSlice = createSlice({
       state.push(newBook);
     },
     removeBook: (state, action) => {
-        const bookPosition = state.findIndex((book) => book.itemId === action.payload);
-        if (bookPosition !== -1) {
-          state.splice(bookPosition, 1);
-        }
+      const bookPosition = state.findIndex((book) => book.itemId === action.payload);
+      if (bookPosition !== -1) {
+        state.splice(bookPosition, 1);
+      }
     },
   },
 });
