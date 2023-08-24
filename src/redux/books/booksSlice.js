@@ -4,21 +4,21 @@ import { v4 as uuidv4 } from 'uuid';
 const initialState = [
   {
     itemId: uuidv4(),
-    title: 'Resident Evil',
-    author: 'S.D. Perry',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
     category: 'Fiction',
   },
   {
     itemId: uuidv4(),
-    title: 'Luna De Pluton',
-    author: 'Dross',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
     category: 'Fiction',
   },
   {
     itemId: uuidv4(),
-    title: 'The Batman who laughs',
-    author: 'Scott Snyder',
-    category: 'Fiction',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
