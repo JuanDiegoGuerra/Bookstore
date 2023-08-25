@@ -26,7 +26,7 @@ const BookList = () => {
   });
 
   return (
-    <section>
+    <section className="body-container">
       <div className="books-container">
         {booksToRender}
       </div>
