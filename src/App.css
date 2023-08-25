@@ -3,3 +3,257 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  background-color: #fff;
+  width: 100%;
+  padding: 1.81rem 6.25rem;
+  display: flex;
+  align-items: center;
+  gap: 2.9rem;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+.header-title {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.82rem;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.active {
+  opacity: 1;
+}
+
+.user-icon {
+  height: 2.8rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.body-container {
+  padding: 1.18rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.18rem;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.book-container {
+  padding: 2rem 9rem 1.75rem 1.68rem;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin-left: 0.93rem;
+}
+
+.book-category {
+  color: #121212;
+  opacity: 0.5;
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin-left: 0.93rem;
+  margin-bottom: 0.3rem;
+}
+
+.book-author {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  color: #4386bf;
+  margin-left: 0.93rem;
+  margin-bottom: 0.5rem;
+}
+
+.controls-container {
+  display: flex;
+  gap: 1px;
+  background-color: #e8e8e8;
+  width: fit-content;
+}
+
+.book-control {
+  color: #4386bf;
+  background-color: #fff;
+  border: none;
+  padding: 0.2rem 0.93rem;
+  cursor: pointer;
+}
+
+.book-control:hover {
+  color: #029aff;
+}
+
+.book-extra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.progress-img {
+  height: 4.25rem;
+}
+
+.percent {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.rc-progress-circle {
+  height: 4.25rem;
+}
+
+.completed {
+  color: #121212;
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.divider {
+  background-color: #e8e8e8;
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 2.5rem;
+}
+
+.update-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.current-chapter {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.chapter-name {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #121212;
+}
+
+.update-btn {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 0.5rem 1.3rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.form-container {
+  border-top: 2px solid #e8e8e8;
+  padding: 1.18rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.18rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+  letter-spacing: -0.18px;
+}
+
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.12rem;
+  width: 100%;
+}
+
+.input-control {
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  border: solid 1px #e8e8e8;
+  font-size: 1rem;
+  min-width: 130px;
+}
+
+.input-control::placeholder {
+  color: #c4c4c4;
+  font-size: 1rem;
+}
+
+.input-title,
+.input-author {
+  width: 100%;
+}
+
+.input-send {
+  min-width: 120px !important;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0290ff;
+  flex: 1;
+}
+
+.grow-3 {
+  flex: 3;
+}
+
+.footer-container {
+  margin-top: auto;
+  padding: 1.8rem 6.25rem;
+  display: flex;
+  place-content: center;
+  background-color: #fff;
+  border-top: #c4c4c4;
+}
