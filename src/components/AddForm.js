@@ -41,7 +41,15 @@ const AddForm = () => {
         </label>
         <br />
         <label className="grow-3" htmlFor="bookAuthor">
-          <input className="input-control input-author" type="text" id="bookAuthor" placeholder="Author" value={author} onChange={handleAuthorChange} required />
+          <select className="input-control input-author" id="bookAuthor" value={author} onChange={handleAuthorChange} required>
+            <option value="Category">Category</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Nonfiction">Nonfiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Drama">Drama</option>
+            <option value="Romantic">Romantic</option>
+            <option value="Comendy">Comendy</option>
+          </select>
         </label>
         <br />
         <button className="input-control input-send" type="submit">ADD BOOK</button>
