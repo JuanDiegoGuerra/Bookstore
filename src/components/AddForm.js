@@ -23,6 +23,7 @@ const AddForm = () => {
       itemId: uuidv4(),
       title,
       author,
+      category: 'N/A',
     };
     dispatch(addBook(newBook));
     setTitle('');

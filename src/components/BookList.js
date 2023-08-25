@@ -1,22 +1,34 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Book from './Book';
 import AddForm from './AddForm';
+import { getBooks } from '../redux/books/booksSlice';
 
 const BookList = () => {
   const books = useSelector((store) => store.books);
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
+  const booksToRender = [];
+  const ids = Object.keys(books);
+  ids.forEach((bookId) => {
+    booksToRender.push(<Book
+      key={bookId}
+      itemId={bookId}
+      title={books[bookId][0].title}
+      author={books[bookId][0].author}
+      category={books[bookId][0].category}
+    />);
+  });
+
   return (
     <section>
       <div className="books-container">
-        {books.map((book) => (
-          <Book
-            key={book.itemId}
-            itemId={book.itemId}
-            title={book.title}
-            author={book.author}
-            category={book.category}
-          />
-        ))}
+        {booksToRender}
       </div>
       <AddForm />
     </section>
