@@ -1,5 +1,5 @@
 const Footer = () => (
-  <h1>Footer</h1>
+<p className="footer-container">Developed by JD Guerra. © 2023.</p>
 );
 
 export default Footer;
