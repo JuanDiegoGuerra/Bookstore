@@ -23,7 +23,7 @@ const AddForm = () => {
       itemId: uuidv4(),
       title,
       author,
-      category: 'N/A',
+      category: 'Action',
     };
     dispatch(addBook(newBook));
     setTitle('');
@@ -31,19 +31,30 @@ const AddForm = () => {
   };
 
   return (
-    <form onSubmit={handleAdd}>
-      <label htmlFor="bookTitle">
-        Title
-        <input type="text" id="bookTitle" placeholder="Title" value={title} onChange={handleTitleChange} />
-      </label>
-      <br />
-      <label htmlFor="bookAuthor">
-        Author
-        <input type="text" id="bookAuthor" placeholder="Author" value={author} onChange={handleAuthorChange} />
-      </label>
-      <br />
-      <button type="submit">Add Book</button>
-    </form>
+    <div className="form-container">
+      <h2 className="form-title">
+        ADD A NEW BOOK
+      </h2>
+      <form className="add-form" onSubmit={handleAdd}>
+        <label className="grow-3" htmlFor="bookTitle">
+          <input className="input-control input-title" type="text" id="bookTitle" placeholder="Title" value={title} onChange={handleTitleChange} required />
+        </label>
+        <br />
+        <label className="grow-3" htmlFor="bookAuthor">
+          <select className="input-control input-author" id="bookAuthor" value={author} onChange={handleAuthorChange} required>
+            <option value="Category">Category</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Nonfiction">Nonfiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Drama">Drama</option>
+            <option value="Romantic">Romantic</option>
+            <option value="Comendy">Comendy</option>
+          </select>
+        </label>
+        <br />
+        <button className="input-control input-send" type="submit">ADD BOOK</button>
+      </form>
+    </div>
   );
 };
 
