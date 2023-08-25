@@ -24,11 +24,11 @@ const BookList = () => {
       category={books[bookId][0].category}
     />);
   });
-  
+
   return (
     <section>
       <div className="books-container">
-      {booksToRender}
+        {booksToRender}
       </div>
       <AddForm />
     </section>
